@@ -20,7 +20,7 @@ def movie_list(request):
         return Response(movie.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['GET', 'POST', "PUT"])
+@api_view(['GET', 'DELETE', "PUT"])
 def movie_detail(request, pk):
     movie = get_object_or_404(Movie, pk=pk)
 
